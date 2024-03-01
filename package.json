@@ -1,17 +1,18 @@
 {
-  "name": "hue-stream",
+  "name": "@ssikoron/hue-stream",
   "version": "0.1.0",
-  "description": "",
+  "description": "A simple interface to the Hue Entertainment API with an API similar to the browsers requestAnimationFrame",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
+    "prepublishOnly": "pnpm run build",
     "start": "node dist/index.js",
     "dev": "ts-node src/test.ts"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Stjepan Sikoronja",
+  "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.3.0",
     "@typescript-eslint/eslint-plugin": "^5.59.11",
@@ -23,7 +24,15 @@
     "typescript": "^5.1.3"
   },
   "dependencies": {
-    "axios": "^1.4.0",
+    "axios": "^1.6.7",
     "node-dtls-client": "^1.1.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ssikoron/hue-sync.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ssikoron/hue-sync/issues"
+  },
+  "homepage": "https://github.com/ssikoron/hue-sync#readme"
 }
