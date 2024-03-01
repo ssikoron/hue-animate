@@ -1,5 +1,5 @@
 {
-  "name": "@ssikoron/hue-sync",
+  "name": "hue-animate",
   "version": "0.1.0",
   "description": "A simple interface to the Hue Entertainment API with an API similar to the browsers requestAnimationFrame",
   "main": "dist/index.js",
@@ -10,7 +10,9 @@
     "start": "node dist/index.js",
     "dev": "ts-node src/test.ts"
   },
-  "keywords": [],
+  "keywords": [
+    "Hue"
+  ],
   "author": "Stjepan Sikoronja",
   "license": "MIT",
   "devDependencies": {
@@ -29,10 +31,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ssikoron/hue-sync.git"
+    "url": "git+https://github.com/ssikoron/hue-animate.git"
   },
   "bugs": {
-    "url": "https://github.com/ssikoron/hue-sync/issues"
+    "url": "https://github.com/ssikoron/hue-animate/issues"
   },
-  "homepage": "https://github.com/ssikoron/hue-sync#readme"
+  "homepage": "https://github.com/ssikoron/hue-animate#readme"
 }

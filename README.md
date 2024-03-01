@@ -1,6 +1,6 @@
-# hue-sync
+# hue-animate
 
-`hue-sync` lets you start a Hue Entertainment API sync session and control lights using an API similar to
+`hue-animate` lets you start a Hue Entertainment API sync session and control lights using an API similar to
 the `requestAnimationFrame()` API in the browser.
 
 ### Why did I build this?
@@ -15,12 +15,12 @@ looked quite alike the requestAnimationFrame in the browser.
 
 ##### Install from npm:
 
-```npm install @ssikoron/hue-sync```
+```npm install hue-animate```
 
 ##### Usage Example:
 
 ```typescript
-import HueSync from '@ssikoron/hue-sync'
+import HueSync from 'hue-animate'
 
 // Configuration needed to connect to the Hue Bridge and start an Entertainment API session
 // Refer to Hue API docs for more details
