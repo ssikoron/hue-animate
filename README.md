@@ -13,6 +13,12 @@ looked quite alike the requestAnimationFrame in the browser.
 
 ### Getting started
 
+##### Install from npm:
+
+```npm install @ssikoron/hue-sync```
+
+##### Usage Example:
+
 ```typescript
 import HueSync from 'hue-sync'
 
