@@ -1,7 +1,9 @@
-import HueStream from './index';
+import HueSync from './index';
 import { HueStreamConfig, Light } from './types';
 
-const config: HueStreamConfig = {
+// Configuration needed to connect to the Hue Bridge and start an Entertainment API session
+// Refer to Hue API docs for more details
+const hueConfig: HueStreamConfig = {
   bridge: {
     ipAddress: '',
     username: '',
@@ -12,21 +14,22 @@ const config: HueStreamConfig = {
   }
 };
 
-const hueStream = new HueStream({ hueConfig: config, options: { debug: true } });
+// Instantiate HueSync
+const hueSync = new HueSync({
+  hueConfig,
+  options: {
+    debug: false
+  }
+});
 
-hueStream.start();
-
-let lastTimestamp = 0;
-
-const someRandomFunction = ({ lights, now }: { lights: Light[]; now: number }) => {
-  const brightness = Math.min((now - lastTimestamp) / 2000, 1);
-  if (lastTimestamp === 0) lastTimestamp = now;
+const myRenderFn = ({ lights, now }) => {
   lights.forEach((light) => {
-    light.brightness = brightness;
+    light.brightness = 1;
   });
-  hueStream.requestAnimationFrame(someRandomFunction);
+  hueSync.requestAnimationFrame(myRenderFn);
 };
 
-setTimeout(() => {
-  hueStream.requestAnimationFrame(someRandomFunction);
-}, 10000);
+// Start a sync session
+hueSync.start().then(() => {
+  hueSync.requestAnimationFrame(myRenderFn);
+});
