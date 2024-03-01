@@ -20,7 +20,7 @@ looked quite alike the requestAnimationFrame in the browser.
 ##### Usage Example:
 
 ```typescript
-import HueSync from 'hue-sync'
+import HueSync from '@ssikoron/hue-sync'
 
 // Configuration needed to connect to the Hue Bridge and start an Entertainment API session
 // Refer to Hue API docs for more details
