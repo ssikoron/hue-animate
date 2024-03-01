@@ -1,5 +1,5 @@
 {
-  "name": "@ssikoron/hue-stream",
+  "name": "@ssikoron/hue-sync",
   "version": "0.1.0",
   "description": "A simple interface to the Hue Entertainment API with an API similar to the browsers requestAnimationFrame",
   "main": "dist/index.js",
