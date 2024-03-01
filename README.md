@@ -20,7 +20,7 @@ looked quite alike the requestAnimationFrame in the browser.
 ##### Usage Example:
 
 ```typescript
-import HueSync from 'hue-animate'
+import HueAnimate from 'hue-animate'
 
 // Configuration needed to connect to the Hue Bridge and start an Entertainment API session
 // Refer to Hue API docs for more details
@@ -35,8 +35,8 @@ const hueConfig: HueStreamConfig = {
     }
 };
 
-// Instantiate HueSync
-const hueSync = new HueSync({
+// Instantiate HueAnimate
+const hueAnimate = new HueAnimate({
     hueConfig,
     options: {
         refreshRate: 20,
@@ -49,12 +49,12 @@ const myRenderFn = ({lights, now}) => {
     lights.forEach((light) => {
         light.brightness = 1;
     });
-    hueSync.requestAnimationFrame(myRenderFn)
+    hueAnimate.requestAnimationFrame(myRenderFn)
 }
 
 // Start a sync session
-hueSync.start().then(() => {
-    hueSync.requestAnimationFrame(myRenderFn)
+hueAnimate.start().then(() => {
+    hueAnimate.requestAnimationFrame(myRenderFn)
 });
 ```
 

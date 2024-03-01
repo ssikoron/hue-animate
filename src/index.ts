@@ -3,7 +3,7 @@ import Renderer from './Renderer';
 import { HueStreamConfig, Light, RenderFrameCallback } from './types';
 import { createMessage } from './utils';
 
-export default class HueSync {
+export default class HueAnimate {
   private streamer: Streamer;
   private renderer: Renderer;
   refreshRate: number;

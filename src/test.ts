@@ -1,4 +1,4 @@
-import HueSync from './index';
+import HueAnimate from './index';
 import { HueStreamConfig, Light } from './types';
 
 // Configuration needed to connect to the Hue Bridge and start an Entertainment API session
@@ -14,8 +14,8 @@ const hueConfig: HueStreamConfig = {
   }
 };
 
-// Instantiate HueSync
-const hueSync = new HueSync({
+// Instantiate HueAnimate
+const hueAnimate = new HueAnimate({
   hueConfig,
   options: {
     debug: false
@@ -26,10 +26,10 @@ const myRenderFn = ({ lights, now }) => {
   lights.forEach((light) => {
     light.brightness = 1;
   });
-  hueSync.requestAnimationFrame(myRenderFn);
+  hueAnimate.requestAnimationFrame(myRenderFn);
 };
 
 // Start a sync session
-hueSync.start().then(() => {
-  hueSync.requestAnimationFrame(myRenderFn);
+hueAnimate.start().then(() => {
+  hueAnimate.requestAnimationFrame(myRenderFn);
 });
